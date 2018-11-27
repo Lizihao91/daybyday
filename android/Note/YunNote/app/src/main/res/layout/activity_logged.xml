@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+   <android.support.design.widget.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:elevation="0dp"
+       android:theme="@style/AppTheme.AppBarOverlay">
+
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar_logged"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@android:color/holo_blue_light"
+          app:contentInsetStart="0dp"
+          android:layout_gravity="center_vertical"
+          app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+         <TextView
+             android:textSize="16dp"
+             android:textColor="@android:color/white"
+             android:layout_gravity="center"
+             android:text="个人资料"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+
+      </android.support.v7.widget.Toolbar>
+
+
+   </android.support.design.widget.AppBarLayout>
+
+   <LinearLayout
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <ImageView
+             android:layout_margin="10dp"
+             android:src="@drawable/setting_default_head_image_unlogin"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+         <TextView
+             android:id="@+id/tvbiguserId"
+             android:layout_gravity="center"
+             android:text="kokooko"
+             android:textSize="20dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+      </LinearLayout>
+      <LinearLayout
+          style="@style/setting_layout">">
+
+         <LinearLayout
+             style="@style/top_layout">
+
+            <TextView
+                android:layout_margin="10dp"
+                style="@style/usertext"
+                android:text="昵称"/>
+            <TextView
+                android:id="@+id/tv_userId"
+                android:layout_margin="10dp"
+                android:text="未填写"
+                style="@style/userRtext"/>
+            <ImageView style="@style/img_arrow"/>
+         </LinearLayout>
+
+         <View style="@style/bg_line"/>
+
+         <LinearLayout
+             style="@style/mid_layout">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:text="性别"
+                style="@style/usertext"/>
+            <TextView
+                android:layout_margin="10dp"
+                android:text="未填写"
+                style="@style/userRtext"/>
+            <ImageView style="@style/img_arrow"/>
+         </LinearLayout>
+
+         <View style="@style/bg_line"/>
+
+         <LinearLayout
+             style="@style/bottom_layout">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:text="简介"
+                style="@style/usertext"/>
+            <TextView
+                android:layout_margin="10dp"
+                android:text="未填写"
+                style="@style/userRtext"/>
+            <ImageView style="@style/img_arrow"/>
+         </LinearLayout>
+
+
+      </LinearLayout>
+
+
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp"
+          android:text="退出登录"
+          android:id="@+id/button"
+          android:onClick="logoff"
+          android:textColor="@android:color/white"
+          android:background="@drawable/btn_mine_bg_red"
+          android:layout_gravity="center_horizontal" />
+   </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

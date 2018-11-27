@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_light"
+            app:contentInsetStart="0dp"
+            android:layout_gravity="center_vertical"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:text="@string/dengluyunbiji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:text="账号："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:textColor="@android:color/darker_gray"
+                android:hint="请输入账号"
+                android:textSize="18dp"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View style="@style/bg_line"/>
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:text="密码："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18dp"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_marginTop="16dp"
+                android:text="@string/denglu"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_corp_bg"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_marginTop="16dp"
+                android:text="@string/zhuce"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_login_bg"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

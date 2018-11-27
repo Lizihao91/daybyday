@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarMe">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/holo_blue_light</item>
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_light"
+            app:contentInsetStart="0dp"
+            android:layout_gravity="center_vertical"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/et_reg_username"
+                android:textColor="@android:color/black"
+                android:hint="账号:4到8字符"
+                android:textSize="18dp"
+                android:maxLength="8"
+                android:digits="qwertyuioplkjhgfdsazxcvbnm1234567890"
+                android:textColorHint="#eaeaea"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/et_reg_password"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:textColorHint="#eaeaea"
+                android:hint="密码:4到8字符"
+                android:digits="qwertyuioplkjhgfdsazxcvbnm1234567890"
+                android:maxLength="8"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_reg_reg"
+            android:layout_marginTop="16dp"
+            android:text="@string/zhuce"
+            android:enabled="false"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:background="@drawable/btn_login_bg"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

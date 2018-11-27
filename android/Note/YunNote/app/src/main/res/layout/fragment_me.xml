@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/lLogin"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/setting_default_head_image_unlogin"/>
+
+            <TextView
+                android:id="@+id/cliklogin"
+                android:text="点此登录"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/setting_layout">">
+
+        <LinearLayout
+            style="@style/top_layout">
+            <ImageView
+                android:src="@drawable/mine_my_favorite_icon"
+                style="@style/img_text" />
+            <TextView
+                style="@style/usertext"
+                android:text="@string/shoucang"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+        <View style="@style/bg_line"/>
+
+        <LinearLayout
+            style="@style/mid_layout">
+            <ImageView
+                android:src="@drawable/mine_my_tag_icon"
+                style="@style/img_text" />
+            <TextView
+                android:text="@string/biaoqian"
+                style="@style/usertext"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+        <View style="@style/bg_line"/>
+
+        <LinearLayout
+            style="@style/bottom_layout">
+            <ImageView
+                android:src="@drawable/mine_service_survey_icon"
+                style="@style/img_text" />
+            <TextView
+                android:text="@string/xiaoxi"
+                style="@style/usertext"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/setting_layout">
+
+
+        <LinearLayout
+            style="@style/top_layout">
+            <ImageView
+                android:src="@drawable/mine_group_corp_icon"
+                style="@style/img_text" />
+            <TextView
+                android:text="@string/yunxiezuo"
+                style="@style/usertext"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+        <View style="@style/bg_line"/>
+
+        <LinearLayout
+            style="@style/bottom_layout">
+            <ImageView
+                android:src="@drawable/mine_satisfaction_survey_icon"
+                style="@style/img_text" />
+            <TextView
+                android:text="@string/manyidu"
+                style="@style/usertext"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity"
+    app:layout_behavior="com.liyyang.yunnote.view.FabBehavior"
+    tools:showIn="@layout/activity_main"
+    android:gravity="end|bottom">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@mipmap/ic_notification_add"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:rippleColor="@android:color/holo_green_dark"
+        app:borderWidth="0dp"
+        android:layout_above="@+id/rG" />
+
+    <RadioGroup
+        android:id="@+id/rG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:layout_alignTop="@+id/fab">
+
+        <RadioButton
+            android:id="@+id/rb_doc"
+            android:text="云笔记"
+            android:checked="true"
+            android:typeface="serif"
+            style="@style/main_tab_bottom"
+            android:textColor="@color/color_selector"
+            android:drawableTop="@drawable/btn_doc_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_corp"
+            android:text="云协作"
+            style="@style/main_tab_bottom"
+            android:textColor="@color/color_selector"
+            android:drawableTop="@drawable/btn_corp_selector" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            android:text="我的"
+            style="@style/main_tab_bottom"
+            android:textColor="@color/color_selector"
+            android:drawableTop="@drawable/btn_mine_selector" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

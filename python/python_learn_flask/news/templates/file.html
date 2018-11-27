@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+        {% block head %}
+            {{ super() }}
+	    <meta charset="UTF-8">
+	    <title>文章</title>
+	    <style type="text/css">
+	    .container {
+		    text-align: center;
+	    }
+		    #time {
+	    }
+	    color:red;
+	    }
+	    </style>
+	{% endblock %}
+</head>
+<body>
+        {% block body %}
+        {{ super() }}
+	    <div class="container">
+		    <h1>{{ title }}</h1>
+	    <h6 id="time">{{ created_time }}</h6>
+	    <div>{{ content }}</div>
+	    </div>
+	{% endblock %}
+</body>
+</html>

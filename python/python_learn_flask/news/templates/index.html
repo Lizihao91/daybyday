@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+        {% block head %}
+            {{ super() }}
+	    <meta charset="UTF-8">
+	    <title>News</title>
+            <style type="text/css">
+                .title {font-size: 30px;}
+                #tags {font-size: 10px; color: red;}
+            </style>
+        {% endblock %}
+</head>
+<body>
+        {% block body %}
+            {{ super() }}
+	    <ul class="list-inline">
+                {% for t in title_list %}
+                <li>
+	            <p class='title'><a href="http://localhost:3000/files/{{ t }}">{{ t }}</a></p>
+                    
+                    {% if tag != None %}
+                            {% for tagt in tag.get(t) %}
+                               <span id='tags'> {{ tagt }} </span>
+                            {% endfor %}
+                    
+                    {% endif %}
+                </li>
+	        {% endfor %}
+            </ul>
+        {% endblock %}
+</body>
+</html>

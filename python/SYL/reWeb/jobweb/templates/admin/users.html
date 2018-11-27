@@ -1,0 +1,62 @@
+{% extends "admin/base.html" %}
+{% from "macros.html" import render_pagination %}
+
+{% block title %}
+Admin - users
+{% endblock %}
+
+{% block operation %}
+
+# 添加按钮： 添加求职者 和 *添加企业 的按钮
+<a href="{{ url_for('admin.create_user') }}" type="buttom" class="btn btn-primary">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  adduser
+</a>
+{% endblock %}
+
+{% block admin %}
+<table class="table">
+  <thred>
+    <tr>
+      <th>ID</th>
+      <th>邮箱</th>
+      <th>用户类型</th>
+      <th>姓名</th>
+      #<th>状态</th>
+      <th>电话</th>
+      #<th>企业名称</th>
+      #<th>企业网站</th>
+      <th>操作</th>
+    </tr>
+    <tbody>
+      {% for user in pagination.items %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.cellphone }}</td>
+        <td>
+        # 编辑 和 禁用 操作
+        <div class="btn-group" role="group">
+          <a href="{{ url_for('admin.edit_user', user_id=user_id) }}" type="bottom" class="btn btn-default" title="编辑">
+            <span class="glyphicon gliphicon-pencil" title="编辑" aria-hidden="true"></span>
+          </a>
+          <a href="{{ url_for('admin.disable_user, user_id=user_id') }}" type="bottom" class="btn btn-default">
+            {% if user.is_disable %}
+              <span class="glyphicon gliphicon-ok" title="启用" aria-hiddent="true"></span>
+            {% else %}
+              <span class="glyphicon gliphicon-off" title="禁用" aria-hiddent="true"></span>
+            {% endif %}
+          </a>
+        </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </thred>
+</table>
+
+# 使用macro渲染分页
+{{ render_pagination(pagination, 'admin.users') }}
+{{% endblock %}}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_pagination %}
+<div class = "container-fluid">
+	</div>
+{% block body %}
+<div class = "container">
+	<div class = 'page-header'>
+		<h1>Job List</h1>
+	</div>
+	{% for job in pagination.items %}
+    <div class = "job-list">
+      <div class="row horizon">
+      	<div class='col-md-6'>
+      		<a href = "{{ url_for('job.detail',job_id = job.id) }}"<p class = 'jobname'>{{ job.jobname}}</p></a>
+      		<p><span style="color:#ff8000;">{{job.salary}}</span> / {{job.experience}}</p>
+      		<p class='text-muted'>[{{ job.workaddress }}]</p>
+      	</div>
+      	<div class='col-md-4'>
+      		<a href = "{{ url_for('company.detail', company_id = job.company_id) }}">{{ job.company.companyname }}</a>
+      		<p>{{ job.company.website }}</p>
+      	</div>
+      	<div class="col-md-2">
+      		<p style = 'text-align:right;'>{{ job.release_time }}</p>
+      	</div>
+      </div>
+  </div>
+    {% endfor %}
+</div>
+
+ {{ render_pagination(pagination, 'job.all') }} 
+{% endblock %}

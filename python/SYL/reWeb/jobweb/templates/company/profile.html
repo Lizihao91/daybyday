@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_form %}
+
+{% block title %}
+User Profile
+{% endblock %}
+
+{% block body %}
+<div class = 'container'>
+<div class = "row">
+	<div class="col-md-3" style="padding-top:30px">
+		<h4> Company Profile</h4>
+		<div class = "list-group">
+			<a href="{{ url_for('company.profile', company_id = company.id) }}" class = 'list-group-item'>Basic Information</a>
+			<a href = "{{ url_for('company.jobs')}}" class = "list-group-item">Manage Jobs</a>
+			<a href = '#' class = "list-group-item"> Manage Application</a>
+		</div>
+	</div>
+
+	<div class = "page-header">
+		<h3>Basic Information</h3>
+	</div>
+
+	<div class='col-md-9'>
+		{{ render_form(form, url_for('company.profile', company_id = current_user.companydetail.id))}}
+	</div>
+</div>
+        {% endblock %}

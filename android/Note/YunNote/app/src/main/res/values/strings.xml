@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">YunNote</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit">编辑</string>
+    <string name="shoucang">我的收藏</string>
+    <string name="biaoqian">我的标签</string>
+    <string name="xiaoxi">消息中心</string>
+    <string name="yunxiezuo">云协作企业版</string>
+    <string name="manyidu">用户满意度调查</string>
+    <string name="yunbijishezhi">云笔记设置</string>
+    <string name="tiaozhengziti">调整字体</string>
+    <string name="guanyuruanjian">关于本软件</string>
+    <string name="settingname">设置</string>
+    <string name="dengluyunbiji">登录到云笔记</string>
+    <string name="zhuce">注册账号</string>
+    <string name="denglu">登录</string>
+    <string name="zhuceactivity">注册账号</string>
+    <string name="denlu">登录</string>
+    <string name="faildgetClip">获取视频失败</string>
+    <string name="faildgetImage">获取图片失败</string>
+    <string name="loginNull">账号密码不能为空</string>
+    <string name="loginNot">账号或密码错误</string>
+    <string name="noLogin">未登录</string>
+    <string name="syncOk">同步成功</string>
+    <string name="loginOK">登录成功</string>
+    <string name="loginNo">登录失败</string>
+    <string name="uploadOk">上传成功！</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="jpg">/storage(.*?)jpg</string>
+</resources>
